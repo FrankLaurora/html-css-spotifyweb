@@ -8,6 +8,7 @@
 /* common */
 body {
     font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
 }
 
 .clearfix::after {
@@ -22,6 +23,10 @@ body {
     min-height: 50px;
 }
 
+.col {
+    width: 230px;
+}
+
 /* header */
 header {
     position: fixed;
@@ -30,11 +35,28 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 90px;
+    background-color: #00000050;
+    padding: 20px 20px 28px;
 }
 
-.col {
-    width: 230px;
+.logo {
+    width: 70%;
 }
+
+header .col button {
+    width: 90%;
+    border: 1px solid #ffffff;
+    padding: 15px 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 10px;
+}
+
+header .col button:hover {
+    transform: scale(1.1);
+}
+
 
 /* left-menu */
 aside {
@@ -43,6 +65,7 @@ aside {
     flex-wrap: wrap;
     height: calc(100vh - 90px);
     padding-top: 90px;
+    background-color: #000000;
 }
 
 .user-box {
@@ -56,6 +79,7 @@ main{
     overflow-y: auto;
     width: calc(100% - 230px);
     padding-top: 90px;
+    background-color: #141922;
 }
 
 /* footer */
@@ -66,6 +90,7 @@ footer {
     justify-content: space-between;
     width: 100%;
     height: 90px;
+    background-color: #282828;
 }
 
 .player {
