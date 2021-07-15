@@ -16,16 +16,36 @@
         <title>Spotify Web</title>
     </head>
     <body class="clearfix">
-        <!-- header with logo and button fixed on top -->
+        <!-- header with button fixed on top -->
         <header>
-            <div class="col"><img class="logo" src="img/logo.svg" alt=""></div>
-            <div class="col"><button>EFFETTUA L'UPGRADE</button></div>
+            <div class="col"><button type="button" class="small-font">EFFETTUA L'UPGRADE</button></div>
         </header>
-        <!-- /header with logo and button fixed on top -->
+        <!-- /header with button fixed on top -->
         <!-- nav-bar on the left -->
         <aside class="col">
-            <nav class="col debug"></nav>
-            <nav class="col debug"></nav>
+            <div class="aside-top">
+                <div class="col"><img class="logo" src="img/logo.svg" alt=""></div>
+                <nav class="col">
+                    <ul class="navigation small-font gray-text">
+                        <li><span class="list-bullet"><img src="img/home.svg" alt=""></span> Home</li>
+                        <li><span class="list-bullet"><img src="img/search.svg" alt=""></span> Cerca</li>
+                        <li><span class="list-bullet"><img src="img/libreria.svg" alt=""></span>La tua libreria</li>
+                    </ul>
+                </nav>
+                <nav class="col playlist">
+                    <h2 class="medium-font">PLAYLIST</h2>
+                    <button type="button"><span class="new-playlist">+</span> Crea Playlist</button>
+                    <ul class="gray-text small-font">
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
+                </nav>
+            </div>
             <div class="col user-box debug"></div>
         </aside>
         <!-- /nav-bar on the left -->
@@ -38,9 +58,9 @@
         <!-- /main content with flexible sections -->
         <!-- footer with navigation elements -->
         <footer>
-            <div class="col debug"></div>
-            <nav class="player debug"></nav>
-            <div class="col debug"></div>
+            <div class="col"></div>
+            <nav class="player"></nav>
+            <div class="col"></div>
         </footer>
         <!-- /footer with navigation elements -->
     </body>
