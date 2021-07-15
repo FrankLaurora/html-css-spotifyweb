@@ -56,6 +56,12 @@ a {
     width: 100%;
 }
 
+.bar {
+    height: 5px;
+    border-radius: 2px;
+    background-color: #5a5a5a;
+}
+
 /* typo */
 .small-font {
     font-size: 0.7rem;
@@ -285,7 +291,6 @@ main{
     color: #ffffff;
 }
 
-
 /* footer */
 footer {
     position: relative;
@@ -297,6 +302,67 @@ footer {
     z-index: 2;
 }
 
+.col-footer {
+    display: flex;
+    padding: 22px 11px 26px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-footer img {
+    height: 100%;
+}
+
+.footer-album-info {
+    padding-right: 2rem;
+}
+
 .player {
     width: 460px;
+    flex-shrink: 1;
 }
+
+.vol-bar {
+    width: 55%;
+}
+
+.vol-lvl, .player-current {
+    width: 20%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: #c1c1c1;
+}
+
+.vol-lvl:hover, .player-current:hover {
+    width: 100%;
+    transition: width 3s;
+}
+
+.player-buttons {
+    text-align: center;
+    padding: 12px 0;
+}
+
+.player-buttons i {
+    padding: 0 6px;
+    vertical-align: middle;
+}
+
+.player-buttons .fa-play-circle {
+    padding: 0 18px;
+    font-size: 1.8rem;
+}
+
+.fa-play-circle:hover {
+    transform: scale(1.1);
+}
+
+.player .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-progress {
+    width: 80%;
+}
+
