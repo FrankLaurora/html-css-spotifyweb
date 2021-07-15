@@ -15,47 +15,139 @@
         <link rel="stylesheet" href="css/style.css">
         <title>Spotify Web</title>
     </head>
-    <body class="clearfix">
+    <body>
         <!-- header with button fixed on top -->
         <header>
             <div class="col"><button type="button" class="small-font">EFFETTUA L'UPGRADE</button></div>
         </header>
         <!-- /header with button fixed on top -->
-        <!-- nav-bar on the left -->
-        <aside class="col">
-            <div class="aside-top">
-                <div class="col"><img class="logo" src="img/logo.svg" alt=""></div>
-                <nav class="col">
-                    <ul class="navigation small-font gray-text">
-                        <li><span class="list-bullet"><img src="img/home.svg" alt=""></span> Home</li>
-                        <li><span class="list-bullet"><img src="img/search.svg" alt=""></span> Cerca</li>
-                        <li><span class="list-bullet"><img src="img/libreria.svg" alt=""></span>La tua libreria</li>
-                    </ul>
-                </nav>
-                <nav class="col playlist">
-                    <h2 class="medium-font">PLAYLIST</h2>
-                    <button type="button"><span class="new-playlist">+</span> Crea Playlist</button>
+        
+        <div class="flex-container">
+            <!-- nav-bar on the left -->
+            <aside class="col">
+                <div class="aside-top">
+                    <div class="col"><img class="logo" src="img/logo.svg" alt=""></div>
+                    <nav class="col">
+                        <ul class="navigation small-font gray-text">
+                            <li><a href="#"><span class="list-bullet"><img src="img/home.svg" alt=""></span> Home</a></li>
+                            <li><a href="#"><span class="list-bullet"><img src="img/search.svg" alt=""></span> Cerca</a></li>
+                            <li><a href="#"><span class="list-bullet"><img src="img/libreria.svg" alt=""></span>La tua libreria</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="col playlist">
+                        <h2 class="medium-font">PLAYLIST</h2>
+                        <button class="gray-text" type="button"><span class="new-playlist">+</span> Crea Playlist</button>
+                        <ul class="gray-text small-font">
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col user-box">
+                    <div class="small-font gray-text user-box-top">
+                        <img src="img/download.svg" alt="#">
+                        <a href="#">Installa app</a>
+                    </div>
+                    <div class="user-box-bottom">
+                        <img src="img/profile.svg" alt="#">
+                        <span class="medium-font"><strong>John Doe</strong></span>
+                    </div>
+                </div>
+            </aside>
+            <!-- /nav-bar on the left -->
+            <!-- main content with flexible sections -->
+            <main>
+                <!-- main menu -->
+                <section class="main-menu">
                     <ul class="gray-text small-font">
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
+                        <li><a class="all-caps" href="#">in evidenza</a></li>
+                        <li><a class="all-caps" href="#">podcast</a></li>
+                        <li><a class="all-caps" href="#">classifiche</a></li>
+                        <li><a class="all-caps" href="#">generi e mood</a></li>
+                        <li><a class="all-caps" href="#">nuove uscite</a></li>
+                        <li><a class="all-caps" href="#">scopri</a></li>
                     </ul>
-                </nav>
-            </div>
-            <div class="col user-box debug"></div>
-        </aside>
-        <!-- /nav-bar on the left -->
-        <!-- main content with flexible sections -->
-        <main>
-            <section class="debug"></section>
-            <section class="debug"></section>
-            <section class="debug"></section>
-        </main>
-        <!-- /main content with flexible sections -->
+                </section>
+                <!-- /main menu -->
+                <!-- recently played with cards -->
+                <section>
+                    <div class="section-title">Recently Played</div>
+                    <div class="row">
+                        <div class="card-lg">
+                            <img class="card-img" src="img/metal_lifting.jpg" alt="#">
+                            <div class="card-title">Heavy Metal</div>
+                            <div class="card-subtitle gray-text small-font">Subtitle</div>
+                        </div>
+                        <div class="card-lg">
+                            <img class="card-img" src="img/stranger.jpeg" alt="#">
+                            <div class="card-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</div>
+                            <div class="card-subtitle gray-text small-font">Kyle Dixon & Michael Stein</div>
+                        </div>
+                        <div class="card-lg">
+                            <img class="card-img" src="img/aquietplace.jpeg" alt="#">
+                            <div class="card-title">A quiet place</div>
+                            <div class="card-subtitle gray-text small-font">Subtitle</div>
+                        </div>
+                        <div class="card-lg">
+                            <img class="card-img" src="img/split.jpeg" alt="#">
+                            <div class="card-title">Split</div>
+                            <div class="card-subtitle gray-text small-font">Subtitle</div>
+                        </div>
+                        <div class="card-lg">
+                            <img class="card-img" src="img/cure.jpeg" alt="#">
+                            <div class="card-title">A cure for wellness</div>
+                            <div class="card-subtitle gray-text small-font">Subtitle</div>
+                        </div>
+                        <div class="card-lg">
+                            <img class="card-img" src="img/sinister.jpeg" alt="#">
+                            <div class="card-title">Sinister</div>
+                            <div class="card-subtitle gray-text small-font">Subtitle</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /recently played with cards -->
+                <!-- playlist made by Spotify -->
+                <section>
+                    <div class="section-title">Creato per John Doe</div>
+                    <div class="section-subtitle small-font gray-text">Più ascolti, più accurati saranno i suggerimenti</div>
+                    <div class="row">
+                        <div class="card-lg">
+                            <img class="card-img" src="img/radar.jpeg" alt="#">
+                            <div class="card-title">Release Radar</div>
+                        </div>
+                        <div class="card-lg">
+                            <img class="card-img" src="img/mixdaily.jpeg" alt="#">
+                            <div class="card-title">Daily Mix 1</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /playlist made by Spotify -->
+                <!-- popular artists -->
+                <section>
+                    <div class="section-title">Artisti più popolari</div>
+                    <div class="section-subtitle small-font gray-text">Più ascolti, più accurati saranno i suggerimenti.</div>
+                    <div class="row">
+                        <div class="card-lg">
+                            <img class="card-img" src="img/youg.jpeg" alt="#">
+                            <div class="card-title">Lana del Rey</div>
+                        </div>
+                        <div class="card-lg">
+                            <img src="img/einaudi.jpeg" alt="#" class="card-img">
+                            <div class="card-title">Ludovico Einaudi</div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /popular artists -->
+
+
+            </main>
+            <!-- /main content with flexible sections -->
+        </div>
         <!-- footer with navigation elements -->
         <footer>
             <div class="col"></div>
