@@ -25,29 +25,29 @@
         <div class="flex-container">
             <!-- nav-bar on the left -->
             <aside class="col">
-                <div class="aside-top">
-                    <div class="col"><img class="logo" src="img/logo.svg" alt=""></div>
-                    <nav class="col">
-                        <ul class="navigation small-font gray-text">
-                            <li><a href="#"><span class="list-bullet"><img src="img/home.svg" alt=""></span> Home</a></li>
-                            <li><a href="#"><span class="list-bullet"><img src="img/search.svg" alt=""></span> Cerca</a></li>
-                            <li><a href="#"><span class="list-bullet"><img src="img/libreria.svg" alt=""></span>La tua libreria</a></li>
-                        </ul>
-                    </nav>
-                    <nav class="col playlist">
-                        <h2 class="medium-font">PLAYLIST</h2>
-                        <button class="gray-text" type="button"><span class="new-playlist">+</span> Crea Playlist</button>
-                        <ul class="gray-text small-font">
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                        </ul>
-                    </nav>
+                <div class="col col-logo">
+                    <img class="logo" src="img/logo.svg" alt="">
                 </div>
+                <nav class="col col-navigation">
+                    <ul class="navigation small-font gray-text">
+                        <li><a href="#"><span class="list-bullet"><img src="img/home.svg" alt=""></span> Home</a></li>
+                        <li><a href="#"><span class="list-bullet"><img src="img/search.svg" alt=""></span> Cerca</a></li>
+                        <li><a href="#"><span class="list-bullet"><img src="img/libreria.svg" alt=""></span>La tua libreria</a></li>
+                    </ul>
+                </nav>
+                <nav class="col playlist">
+                    <h2 class="medium-font">PLAYLIST</h2>
+                    <button class="gray-text" type="button"><span class="new-playlist">+</span> Crea Playlist</button>
+                    <ul class="gray-text small-font">
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                        <li><a href="#">Nome Playlist</a></li>
+                    </ul>
+                </nav>
                 <div class="col user-box">
                     <div class="small-font gray-text user-box-top">
                         <img src="img/download.svg" alt="#">
@@ -79,32 +79,44 @@
                     <div class="section-title">Recently Played</div>
                     <div class="row">
                         <div class="card-lg">
-                            <img class="card-img" src="img/metal_lifting.jpg" alt="#">
+                            <div class="img-container">
+                                <img class="card-img" src="img/metal_lifting.jpg" alt="#">
+                            </div>
                             <div class="card-title">Heavy Metal</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
                         <div class="card-lg">
-                            <img class="card-img" src="img/stranger.jpeg" alt="#">
+                            <div class="img-container">
+                                <img class="card-img" src="img/stranger.jpeg" alt="#">
+                            </div>
                             <div class="card-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</div>
                             <div class="card-subtitle gray-text small-font">Kyle Dixon & Michael Stein</div>
                         </div>
                         <div class="card-lg">
-                            <img class="card-img" src="img/aquietplace.jpeg" alt="#">
+                            <div class="img-container">
+                                <img class="card-img" src="img/aquietplace.jpeg" alt="#">
+                            </div>
                             <div class="card-title">A quiet place</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
                         <div class="card-lg">
-                            <img class="card-img" src="img/split.jpeg" alt="#">
+                            <div class="img-container">
+                                <img class="card-img" src="img/split.jpeg" alt="#">
+                            </div>
                             <div class="card-title">Split</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
                         <div class="card-lg">
-                            <img class="card-img" src="img/cure.jpeg" alt="#">
+                            <div class="img-container">
+                                <img class="card-img" src="img/cure.jpeg" alt="#">
+                            </div>
                             <div class="card-title">A cure for wellness</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
                         <div class="card-lg">
-                            <img class="card-img" src="img/sinister.jpeg" alt="#">
+                            <div class="img-container">
+                                <img class="card-img" src="img/sinister.jpeg" alt="#">
+                            </div>
                             <div class="card-title">Sinister</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
@@ -128,7 +140,7 @@
                 </section>
                 <!-- /playlist made by Spotify -->
                 <!-- popular artists -->
-                <section>
+                <section class="popular">
                     <div class="section-title">Artisti più popolari</div>
                     <div class="section-subtitle small-font gray-text">Più ascolti, più accurati saranno i suggerimenti.</div>
                     <div class="row">

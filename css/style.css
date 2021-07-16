@@ -13,6 +13,7 @@ body {
 
 .flex-container {
     display: flex;
+    padding-bottom: 90px;
 }
 
 ul {
@@ -22,12 +23,6 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-.clearfix::after {
-    content: '';
-    display: table;
-    clear: both;
 }
 
 .debug {
@@ -52,9 +47,26 @@ a {
     padding-right: 10px;
 }
 
-.card-img {
+.img-container {
+    position: relative;
     width: 100%;
 }
+
+.card-img {
+    width: 100%;
+    display: block;
+}
+
+/* not working */
+.img-container:hover::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: red;
+}
+/* /not working */
 
 .bar {
     height: 5px;
@@ -140,13 +152,11 @@ aside {
     justify-content: space-between;
     height: calc(100vh - 90px);
     background-color: #000000;
+    overflow: hidden;
 }
 
-.aside-top {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 5;
-    flex-grow: 1;
+.col-logo, .col-navigation, .user-box {
+    flex-shrink: 0;
 }
 
 /* nav-bar on the left */
@@ -177,7 +187,8 @@ aside li:hover {
 /* playlist management nav-bar */
 .playlist {
     padding-left: 23px;
-    flex-shrink: 1;
+    flex-grow: 1;
+    flex-shrink: 2;
 }
 
 .playlist button {
@@ -225,7 +236,6 @@ aside li:hover {
 
 /* aside bottom box */
 .user-box {
-    flex-shrink: 0;
     padding: 0 23px;
 }
 
@@ -291,15 +301,19 @@ main{
     color: #ffffff;
 }
 
+.popular .row .card-img {
+    border-radius: 50%;
+}
 /* footer */
 footer {
-    position: relative;
+    position: fixed;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 90px;
     background-color: #282828;
-    z-index: 2;
+    z-index: 1;
 }
 
 .col-footer {
@@ -307,6 +321,7 @@ footer {
     padding: 22px 11px 26px;
     justify-content: space-between;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .col-footer img {
@@ -327,6 +342,7 @@ footer {
 }
 
 .vol-lvl, .player-current {
+    position: relative;
     width: 20%;
     height: 100%;
     border-radius: 2px;
@@ -334,8 +350,19 @@ footer {
 }
 
 .vol-lvl:hover, .player-current:hover {
-    width: 100%;
-    transition: width 3s;
+    background-color: #adff2f;
+}
+
+.vol-lvl:hover::after, .player-current:hover::after {
+    position: absolute;
+    content: '';
+    left: 100%;
+    top: 50%;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #c1c1c1;
+    transform: translate(-50%, -47%);
 }
 
 .player-buttons {
