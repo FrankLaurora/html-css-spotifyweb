@@ -13,7 +13,7 @@ body {
 
 .flex-container {
     display: flex;
-    padding-bottom: 90px;
+    height: calc(100vh - 90px);
 }
 
 ul {
@@ -57,16 +57,22 @@ a {
     display: block;
 }
 
-/* not working */
 .img-container:hover::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Font Awesome 5 Free";
+    content: '\f144';
+    font-weight: 900;
+    font-size: 2rem;
+    background-color: #00000050;
+    cursor: pointer;
 }
-/* /not working */
 
 .bar {
     height: 5px;
@@ -150,7 +156,6 @@ aside {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100vh - 90px);
     background-color: #000000;
     overflow: hidden;
 }
@@ -186,12 +191,15 @@ aside li:hover {
 
 /* playlist management nav-bar */
 .playlist {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     padding-left: 23px;
     flex-grow: 1;
-    flex-shrink: 2;
 }
 
 .playlist button {
+    align-self: flex-start;
     background-color: transparent;
     font-size: 0.9rem;
     border: none;
@@ -223,7 +231,7 @@ aside li:hover {
 
 .playlist ul {
     overflow-y: auto;
-    max-height: 30vh;
+    flex-grow: 1;
 }
 
 .playlist li {
@@ -289,10 +297,10 @@ main{
 
 .main-menu li:first-child::after {
     position: absolute;
+    content: '';
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
-    content: '';
     width: 2rem;
     border: 1px solid #adff2f;
 }
@@ -301,9 +309,10 @@ main{
     color: #ffffff;
 }
 
-.popular .row .card-img {
+.popular .row .card-img, .popular .row .img-container:hover::after {
     border-radius: 50%;
 }
+
 /* footer */
 footer {
     position: fixed;
