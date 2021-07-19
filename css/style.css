@@ -116,6 +116,7 @@ a {
 
 .card-subtitle {
     text-align: center;
+    padding-bottom: 12px;
 }
 
 /* header */
@@ -129,6 +130,7 @@ header {
     height: 90px;
     background-color: #00000050;
     padding: 20px 20px 28px;
+    z-index: 1;
 }
 
 header .col button {
@@ -158,6 +160,7 @@ aside {
     justify-content: space-between;
     background-color: #000000;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .col-logo, .col-navigation, .user-box {
@@ -174,7 +177,7 @@ aside {
     border-left: 3px solid transparent;
 }
 
-aside .navigation li:first-child {
+aside .navigation li:hover {
     border-left: 3px solid #adff2f;
     color: #ffffff;
 }
@@ -252,7 +255,7 @@ aside li:hover {
     padding-bottom: 12px;
 }
 
-.user-box-top img {
+.user-box-top img, .small-col .download {
     width: 1rem;
     margin-right: 5px;
     vertical-align: middle;
@@ -265,7 +268,7 @@ aside li:hover {
 .user-box-bottom {
     padding: 14px 0 6px;
 }
-.user-box-bottom img {
+.user-box-bottom img, .small-col .profile {
     width: 1.5rem;
     height: 1.5rem;
     background-color: #808080;
@@ -279,7 +282,7 @@ aside li:hover {
 main{
     max-height: calc(100vh - 90px);
     overflow-y: auto;
-    width: calc(100% - 230px);
+    flex-grow: 1;
     padding-top: 90px;
     background-color: #141922;
 }
@@ -292,16 +295,17 @@ main{
 .main-menu li {
     position: relative;
     display: inline-block;
-    padding: 6px 23px;
+    padding: 12px 23px;
 }
 
-.main-menu li:first-child::after {
+.main-menu a:hover::after {
     position: absolute;
     content: '';
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
     width: 2rem;
+    background-color: #adff2f;
     border: 1px solid #adff2f;
 }
 
@@ -322,7 +326,7 @@ footer {
     width: 100%;
     height: 90px;
     background-color: #282828;
-    z-index: 1;
+    z-index: 2;
 }
 
 .col-footer {
@@ -338,16 +342,44 @@ footer {
 }
 
 .footer-album-info {
-    padding-right: 2rem;
+   flex-grow: 2;
+   padding-left: 6px;
+}
+
+.col-footer .left-btn {
+    flex-grow: 1;
+    padding-left: 6px;
+}
+
+.footer-album-info .name:hover, .col-footer .left-btn:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.footer-album-info .name:hover {
+    text-decoration: underline;
 }
 
 .player {
-    width: 460px;
-    flex-shrink: 1;
+    max-width: 690px;
+    flex-grow: 1;
+}
+
+.player .row {
+    padding: 0;
+}
+.player .small-font {
+    padding: 0 6px;
+}
+
+.col-footer .right-btn {
+    padding-right: 6px;
+    flex-grow: 1;
 }
 
 .vol-bar {
-    width: 55%;
+    width: 50%;
+    flex-shrink: 2;
 }
 
 .vol-lvl, .player-current {
@@ -356,6 +388,10 @@ footer {
     height: 100%;
     border-radius: 2px;
     background-color: #c1c1c1;
+}
+
+.vol-bar:hover, .player-progress:hover {
+    cursor: pointer;
 }
 
 .vol-lvl:hover, .player-current:hover {
@@ -375,13 +411,19 @@ footer {
 }
 
 .player-buttons {
-    text-align: center;
-    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
 }
 
 .player-buttons i {
     padding: 0 6px;
     vertical-align: middle;
+}
+
+.player-buttons i:hover {
+    cursor: pointer;
 }
 
 .player-buttons .fa-play-circle {
@@ -394,11 +436,73 @@ footer {
 }
 
 .player .row {
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .player-progress {
-    width: 80%;
+    width: 60%;
+    flex-shrink: 2;
 }
 
+/* responsive */
+@media screen and (min-width: 601px) {
+    .small-col {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .card-md {
+        width: 25%;
+    } 
+}
+
+@media screen and (max-width: 700px) {
+    .card-sm {
+        width: 50%;
+    }
+    
+    .col-footer {
+        flex-shrink: 1;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    header {
+        width: calc(100% - 70px);
+    }
+
+    aside.col {
+        width: 70px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .col-logo, .col-navigation, .playlist, .user-box{
+        display: none;
+    }
+
+    .small-nav {
+        flex-grow: 1;
+    }
+
+    .small-col img {
+        display: block;
+        width: 1.8rem;
+        margin: 6px;
+    }
+
+    .small-col .download{
+        margin-left: 9px;
+    }
+
+    .small-col .profile {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .small-col .small-logo {
+        filter: invert(1);
+    }
+}

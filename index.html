@@ -26,15 +26,32 @@
             <!-- nav-bar on the left -->
             <aside class="col">
                 <div class="col col-logo">
-                    <img class="logo" src="img/logo.svg" alt="">
+                    <img class="logo" src="img/logo.svg" alt="#">
                 </div>
+                
+                <!-- hidden small logo to be shown in xs view -->
+                <div class="small-col">
+                    <img class="small-logo" src="img/favicon.ico" alt="#">
+                </div>
+                <!-- /hidden small logo to be shown in xs view -->
+
                 <nav class="col col-navigation">
                     <ul class="navigation small-font gray-text">
-                        <li><a href="#"><span class="list-bullet"><img src="img/home.svg" alt=""></span> Home</a></li>
-                        <li><a href="#"><span class="list-bullet"><img src="img/search.svg" alt=""></span> Cerca</a></li>
-                        <li><a href="#"><span class="list-bullet"><img src="img/libreria.svg" alt=""></span>La tua libreria</a></li>
+                        <li><a href="#"><span class="list-bullet"><img src="img/home.svg" alt="#"></span> Home</a></li>
+                        <li><a href="#"><span class="list-bullet"><img src="img/search.svg" alt="#"></span> Cerca</a></li>
+                        <li><a href="#"><span class="list-bullet"><img src="img/libreria.svg" alt="#"></span>La tua libreria</a></li>
                     </ul>
                 </nav>
+                <!-- hidden navigation icon to be shown in xs view -->
+                <div class="small-col small-nav">
+                    <ul>
+                        <li><a href="#"><img src="img/home.svg" alt="#"></a></li>
+                        <li><a href="#"><img src="img/search.svg" alt="#"></a></li>
+                        <li><a href="#"><img src="img/libreria.svg" alt="#"></a></li>
+                    </ul>
+                </div>
+                <!-- /hidden navigation icon to be shown in xs view -->
+
                 <nav class="col playlist">
                     <h2 class="medium-font">PLAYLIST</h2>
                     <button class="gray-text" type="button"><span class="new-playlist">+</span> Crea Playlist</button>
@@ -48,6 +65,7 @@
                         <li><a href="#">Nome Playlist</a></li>
                     </ul>
                 </nav>
+
                 <div class="col user-box">
                     <div class="small-font gray-text user-box-top">
                         <img src="img/download.svg" alt="#">
@@ -58,6 +76,13 @@
                         <span class="medium-font"><strong>John Doe</strong></span>
                     </div>
                 </div>
+                <!-- hidden user-box to be shown in xs view -->
+                <div class="small-col">
+                    <img class="download" src="img/download.svg" alt="#">
+                    <img class="profile" src="img/profile.svg" alt="#">
+                </div>
+                <!-- hidden user-box to be shown in xs view -->
+
             </aside>
             <!-- /nav-bar on the left -->
             <!-- main content with flexible sections -->
@@ -78,42 +103,42 @@
                 <section>
                     <div class="section-title">Recently Played</div>
                     <div class="row">
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/metal_lifting.jpg" alt="#">
                             </div>
                             <div class="card-title">Heavy Metal</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/stranger.jpeg" alt="#">
                             </div>
                             <div class="card-title">Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</div>
                             <div class="card-subtitle gray-text small-font">Kyle Dixon & Michael Stein</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/aquietplace.jpeg" alt="#">
                             </div>
                             <div class="card-title">A quiet place</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/split.jpeg" alt="#">
                             </div>
                             <div class="card-title">Split</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/cure.jpeg" alt="#">
                             </div>
                             <div class="card-title">A cure for wellness</div>
                             <div class="card-subtitle gray-text small-font">Subtitle</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/sinister.jpeg" alt="#">
                             </div>
@@ -128,13 +153,13 @@
                     <div class="section-title">Creato per John Doe</div>
                     <div class="section-subtitle small-font gray-text">Più ascolti, più accurati saranno i suggerimenti</div>
                     <div class="row">
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/radar.jpeg" alt="#">
                             </div>
                             <div class="card-title">Release Radar</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/mixdaily.jpeg" alt="#">
                             </div>
@@ -148,13 +173,13 @@
                     <div class="section-title">Artisti più popolari</div>
                     <div class="section-subtitle small-font gray-text">Più ascolti, più accurati saranno i suggerimenti.</div>
                     <div class="row">
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img class="card-img" src="img/youg.jpeg" alt="#">
                             </div>
                             <div class="card-title">Lana del Rey</div>
                         </div>
-                        <div class="card-lg">
+                        <div class="card-lg card-md card-sm">
                             <div class="img-container">
                                 <img src="img/einaudi.jpeg" alt="#" class="card-img">
                             </div>
@@ -172,10 +197,10 @@
                 <img src="img/sinister.jpeg" alt="#">
                 <div class="footer-album-info">
                     <div class="medium-font">Sinister</div>
-                    <div class="small-font gray-text">Brano Nome</div>
+                    <div class="small-font gray-text name">Brano Nome</div>
                 </div>
-                <div class="gray-text .btn"><i class="far fa-heart"></i></div>
-                <div class="gray-text"><i class="far fa-folder"></i></div>
+                <div class="gray-text left-btn"><i class="far fa-heart"></i></div>
+                <div class="gray-text left-btn"><i class="far fa-folder"></i></div>
             </div>
             <nav class="player">
                 <div class="player-buttons">
@@ -194,9 +219,9 @@
                 </div>
             </nav>
             <div class="col col-footer">
-                <div><i class="fas fa-list"></i></div>
-                <div><i class="fas fa-tv"></i></div>
-                <div><i class="fas fa-volume-up"></i></div>
+                <div class="right-btn"><i class="fas fa-list"></i></div>
+                <div class="right-btn"><i class="fas fa-tv"></i></div>
+                <div class="right-btn"><i class="fas fa-volume-up"></i></div>
                 <div class="bar vol-bar">
                     <div class="vol-lvl"></div>
                 </div>
