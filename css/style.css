@@ -137,7 +137,7 @@ header .col button {
     width: 90%;
     border: 1px solid #ffffff;
     padding: 15px 40px;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color: transparent;
     color: #ffffff;
 }
@@ -361,7 +361,7 @@ footer {
 }
 
 .player {
-    max-width: 690px;
+    max-width: 920px;
     flex-grow: 1;
 }
 
@@ -503,6 +503,6 @@ footer {
     }
 
     .small-col .small-logo {
-        filter: invert(1);
+        width: 2rem;
     }
 }
